@@ -1,6 +1,6 @@
 .app-shell {
   min-height: 100vh;
-  background: #f6f2e8;
+  background: #e7efed;
   color: #1e1b18;
 }
 
@@ -130,11 +130,55 @@
   transform: rotate(18deg);
 }
 
+.settings-panel,
 .control-bar,
 .challenge-panel,
 .game-grid {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
+}
+
+.settings-panel {
+  margin-top: 22px;
+  border: 4px solid #161412;
+  border-radius: 8px;
+  background: #fbf8ef;
+  box-shadow: 8px 8px 0 #161412;
+}
+
+.settings-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 3px solid #161412;
+  background: #2f6f73;
+  color: #ffffff;
+}
+
+.settings-heading h2 {
+  color: inherit;
+}
+
+.settings-heading span {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 12px;
+  padding: 14px;
+}
+
+.settings-grid label {
+  display: grid;
+  gap: 6px;
+  color: #39342e;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .control-bar {
@@ -159,7 +203,8 @@ input {
   font: inherit;
 }
 
-select {
+select,
+input[type='number'] {
   min-height: 38px;
   padding: 0 36px 0 12px;
   border: 2px solid #1e1b18;
@@ -167,7 +212,16 @@ select {
   background: #fffaf0;
 }
 
+input[type='number'] {
+  width: 100%;
+  padding-right: 8px;
+}
+
 .toggle {
+  align-self: end;
+  display: flex;
+  gap: 8px;
+  align-items: center;
   min-height: 38px;
   padding: 0 12px;
   border: 2px solid #1e1b18;
@@ -217,7 +271,7 @@ h2 {
 .order-panel {
   border: 4px solid #161412;
   border-radius: 8px;
-  background: #fffaf0;
+  background: #fbf8ef;
   box-shadow: 8px 8px 0 #161412;
 }
 
@@ -232,19 +286,69 @@ h2 {
   font-weight: 800;
 }
 
+.menu-title {
+  background: #b63b32;
+  color: #ffffff;
+}
+
+.menu-title h2,
+.menu-title .eyebrow {
+  color: inherit;
+}
+
+.menu-title .eyebrow {
+  margin-bottom: 4px;
+}
+
 .menu-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 10px;
-  padding: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 30px;
+  padding: 24px;
+  background:
+    linear-gradient(90deg, transparent calc(50% - 1px), #d7c9aa calc(50% - 1px), #d7c9aa calc(50% + 1px), transparent calc(50% + 1px)),
+    #fffaf0;
+}
+
+.menu-section {
+  min-width: 0;
+}
+
+.menu-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 4px double #161412;
+}
+
+.menu-section-heading h3 {
+  margin: 0;
+  color: #8d2f23;
+  font-size: 24px;
+}
+
+.menu-section-heading span {
+  color: #655b4c;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.menu-section-items {
+  display: grid;
+  gap: 2px;
 }
 
 .menu-item {
-  min-height: 88px;
-  padding: 12px;
-  border: 2px solid #2a2723;
-  border-radius: 6px;
-  background: #ffffff;
+  min-height: 58px;
+  padding: 8px 6px;
+  border: 0;
+  border-bottom: 1px solid #dfd1b2;
+  border-radius: 4px;
+  background: transparent;
   color: inherit;
   text-align: left;
   cursor: pointer;
@@ -257,16 +361,32 @@ h2 {
 }
 
 .menu-item.selected {
-  background: #d6f0d2;
-  box-shadow: inset 0 0 0 3px #2d6a4f;
+  background: #d7ebdf;
+  box-shadow: inset 0 0 0 2px #2d6a4f;
 }
 
+.menu-item-line,
 .item-main,
 .selected-list li,
 .score-line {
   display: flex;
   justify-content: space-between;
   gap: 12px;
+}
+
+.menu-item-line {
+  align-items: start;
+}
+
+.item-name-block {
+  min-width: 0;
+}
+
+.menu-dots {
+  flex: 1;
+  min-width: 20px;
+  margin-top: 19px;
+  border-bottom: 2px dotted #ad9d7e;
 }
 
 .korean-name {
@@ -433,7 +553,7 @@ h2 {
 
 .dialogue-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 10px;
 }
 
@@ -530,6 +650,7 @@ h2 {
   }
 
   .control-bar,
+  .settings-panel,
   .challenge-panel,
   .game-grid,
   .dialogue-panel {
@@ -537,6 +658,22 @@ h2 {
   }
 
   .menu-list {
+    grid-template-columns: 1fr;
+    background: #fffaf0;
+  }
+
+  .settings-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .settings-grid {
     grid-template-columns: 1fr;
   }
 }

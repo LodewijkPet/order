@@ -34,6 +34,24 @@ export const dialogueScenarios = [
           'Often natural in small owner-run places, but less suitable in formal service contexts.',
       },
       {
+        id: 'attention-jumunhalgeyo',
+        korean: '주문할게요.',
+        meaning: 'I will order.',
+        score: 6,
+        register: 'politeYo',
+        explanation:
+          'Polite, but it works better after you already have the waiter’s attention.',
+      },
+      {
+        id: 'attention-seonsaengnim',
+        korean: '선생님.',
+        meaning: 'Teacher / respectful address.',
+        score: 4,
+        register: 'awkward',
+        explanation:
+          'Respectful in some contexts, but not a natural way to call restaurant staff.',
+      },
+      {
         id: 'attention-ya',
         korean: '야!',
         meaning: 'Hey!',
@@ -57,6 +75,15 @@ export const dialogueScenarios = [
         explanation: 'Very natural when you are ready to place an order.',
       },
       {
+        id: 'order-jumunhaedo-doelkkayo',
+        korean: '주문해도 될까요?',
+        meaning: 'May I order?',
+        score: 9,
+        register: 'politeYo',
+        explanation:
+          'Natural and polite. It sounds a little more tentative than 주문할게요.',
+      },
+      {
         id: 'order-jumunhago-sipseumnida',
         korean: '주문하고 싶습니다.',
         meaning: 'I would like to order.',
@@ -64,6 +91,15 @@ export const dialogueScenarios = [
         register: 'formalSeumnida',
         explanation:
           'Grammatical and polite, but a bit textbook-like for a casual restaurant.',
+      },
+      {
+        id: 'order-menyu-juseyo',
+        korean: '메뉴 주세요.',
+        meaning: 'Please give me the menu.',
+        score: 3,
+        register: 'politeYo',
+        explanation:
+          'Polite Korean, but it asks for a menu instead of saying you are ready to order.',
       },
       {
         id: 'order-jumun',
@@ -91,6 +127,15 @@ export const dialogueScenarios = [
           'Natural when pointing at menu items. Naming the dishes is clearer, but this is common.',
       },
       {
+        id: 'items-named-order',
+        korean: '김치찌개 하나랑 공깃밥 하나 주세요.',
+        meaning: 'Please give me one kimchi stew and one bowl of rice.',
+        score: 10,
+        register: 'politeYo',
+        explanation:
+          'Clear, polite, and natural when those are the dishes you want.',
+      },
+      {
         id: 'items-hana-juseyo',
         korean: '이거 하나 주세요.',
         meaning: 'Please give me one of this.',
@@ -98,6 +143,24 @@ export const dialogueScenarios = [
         register: 'politeYo',
         explanation:
           'Natural for one item. It may be incomplete if the order has several dishes.',
+      },
+      {
+        id: 'items-du-gae-juseyo',
+        korean: '이거 두 개 주세요.',
+        meaning: 'Please give me two of this.',
+        score: 8,
+        register: 'politeYo',
+        explanation:
+          'Natural for ordering two of the same item, but it is not right for every order.',
+      },
+      {
+        id: 'items-geugeo-juseyo',
+        korean: '그거 주세요.',
+        meaning: 'Please give me that.',
+        score: 5,
+        register: 'politeYo',
+        explanation:
+          'Polite, but vague unless the waiter clearly knows what you mean.',
       },
       {
         id: 'items-jwo',
@@ -125,6 +188,15 @@ export const dialogueScenarios = [
           'Natural and clear. 돼요 is polite and common in this kind of confirmation.',
       },
       {
+        id: 'clarification-ne-gwaenchanseumnida',
+        korean: '네, 괜찮습니다.',
+        meaning: 'Yes, that is fine.',
+        score: 8,
+        register: 'formalSeumnida',
+        explanation:
+          'Polite and clear. Slightly formal, but acceptable.',
+      },
+      {
         id: 'clarification-matayo',
         korean: '네, 맞아요.',
         meaning: 'Yes, that is right.',
@@ -132,6 +204,15 @@ export const dialogueScenarios = [
         register: 'politeYo',
         explanation:
           'Polite and understandable, though less specific than saying 한 병이면 돼요.',
+      },
+      {
+        id: 'clarification-du-byeong',
+        korean: '아니요, 두 병 주세요.',
+        meaning: 'No, please give me two bottles.',
+        score: 7,
+        register: 'politeYo',
+        explanation:
+          'Natural if you really want to change the quantity, but it does not confirm the waiter’s suggestion.',
       },
       {
         id: 'clarification-geurae',
@@ -159,12 +240,29 @@ export const dialogueScenarios = [
           'Natural before eating. The -습니다 form is fixed and common here, not overly stiff.',
       },
       {
+        id: 'arrives-ne-gamsahamnida',
+        korean: '네, 감사합니다.',
+        meaning: 'Yes, thank you.',
+        score: 9,
+        register: 'formalSeumnida',
+        explanation: 'Natural and polite when receiving food.',
+      },
+      {
         id: 'arrives-gamsahamnida',
         korean: '감사합니다.',
         meaning: 'Thank you.',
         score: 9,
         register: 'formalSeumnida',
         explanation: 'Simple, polite, and natural when food is served.',
+      },
+      {
+        id: 'arrives-sugo',
+        korean: '수고하세요.',
+        meaning: 'Keep up the hard work.',
+        score: 4,
+        register: 'politeYo',
+        explanation:
+          'Polite-looking, but not the most natural response when food arrives.',
       },
       {
         id: 'arrives-gwaenchana',
@@ -192,6 +290,15 @@ export const dialogueScenarios = [
           'Polite and natural. 죄송한데요 softens the correction.',
       },
       {
+        id: 'missing-confirm-rice',
+        korean: '죄송한데요, 공깃밥 좀 확인해 주세요.',
+        meaning: 'Sorry, could you please check on the rice?',
+        score: 9,
+        register: 'politeYo',
+        explanation:
+          'Polite and natural, especially if you want to avoid sounding too direct.',
+      },
+      {
         id: 'missing-eopseoyo',
         korean: '하나 없어요.',
         meaning: 'One is missing / there is not one.',
@@ -199,6 +306,15 @@ export const dialogueScenarios = [
         register: 'awkward',
         explanation:
           'Understandable, but less clear and less natural than 안 나왔어요.',
+      },
+      {
+        id: 'missing-naoneun-jung',
+        korean: '혹시 지금 나오는 중이에요?',
+        meaning: 'Is it perhaps coming out now?',
+        score: 7,
+        register: 'politeYo',
+        explanation:
+          'Polite and soft, but less direct if you simply need to report a missing item.',
       },
       {
         id: 'missing-wae-eopseo',
@@ -225,6 +341,15 @@ export const dialogueScenarios = [
         explanation: 'Natural and polite when everything is fine.',
       },
       {
+        id: 'checkin-ne-jal-meokgo-isseoyo',
+        korean: '네, 잘 먹고 있어요.',
+        meaning: 'Yes, I am eating well.',
+        score: 9,
+        register: 'politeYo',
+        explanation:
+          'Friendly and natural when staff asks whether everything is okay.',
+      },
+      {
         id: 'checkin-joayo',
         korean: '네, 좋아요.',
         meaning: 'Yes, it is good.',
@@ -232,6 +357,15 @@ export const dialogueScenarios = [
         register: 'politeYo',
         explanation:
           'Polite and positive. 괜찮아요 is a little more idiomatic for this check-in.',
+      },
+      {
+        id: 'checkin-mul-juseyo',
+        korean: '물 좀 더 주세요.',
+        meaning: 'Please give me some more water.',
+        score: 6,
+        register: 'politeYo',
+        explanation:
+          'Natural request, but it does not directly answer that everything is okay.',
       },
       {
         id: 'checkin-molla',
@@ -258,12 +392,30 @@ export const dialogueScenarios = [
           'Very natural when you go to the counter or tell staff you are ready to pay.',
       },
       {
+        id: 'bill-card',
+        korean: '카드로 계산할게요.',
+        meaning: 'I will pay by card.',
+        score: 10,
+        register: 'politeYo',
+        explanation:
+          'Natural when paying and specifying card payment.',
+      },
+      {
         id: 'bill-gyesanhae-juseyo',
         korean: '계산해 주세요.',
         meaning: 'Please calculate / please let me pay.',
         score: 9,
         register: 'politeYo',
         explanation: 'Natural and polite for asking to pay.',
+      },
+      {
+        id: 'bill-eodiseo',
+        korean: '계산은 어디서 해요?',
+        meaning: 'Where do I pay?',
+        score: 8,
+        register: 'politeYo',
+        explanation:
+          'Natural when you are unsure whether to pay at the table or counter.',
       },
       {
         id: 'bill-don',
@@ -290,6 +442,15 @@ export const dialogueScenarios = [
           'Natural and polite after a meal. 잘 먹었습니다 is common when leaving.',
       },
       {
+        id: 'leaving-annyeonghi-gyeseyo',
+        korean: '안녕히 계세요.',
+        meaning: 'Goodbye.',
+        score: 8,
+        register: 'formalSeumnida',
+        explanation:
+          'Polite and acceptable when leaving, though it is less restaurant-specific.',
+      },
+      {
         id: 'leaving-gamsahamnida',
         korean: '감사합니다.',
         meaning: 'Thank you.',
@@ -297,6 +458,15 @@ export const dialogueScenarios = [
         register: 'formalSeumnida',
         explanation:
           'Polite and fine, though 잘 먹었습니다 adds a natural restaurant-specific closing.',
+      },
+      {
+        id: 'leaving-sugo',
+        korean: '수고하세요.',
+        meaning: 'Keep up the hard work.',
+        score: 6,
+        register: 'politeYo',
+        explanation:
+          'Often heard, but it can be socially delicate depending on age and status. 감사합니다 is safer.',
       },
       {
         id: 'leaving-annyeong',

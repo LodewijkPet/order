@@ -1,5 +1,15 @@
 export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced'
 
+export type InstructionLanguage = 'english' | 'korean' | 'mixed'
+
+export type ScenarioFocus =
+  | 'fullRestaurantFlow'
+  | 'menuReadingOnly'
+  | 'culturalCombinations'
+  | 'budgetChallenges'
+  | 'orderingPhrases'
+  | 'politeness'
+
 export type RestaurantType =
   | 'casual'
   | 'barbecue'
@@ -187,6 +197,21 @@ export interface DifficultySetting {
   translationDefault: TranslationVisibility
   visualHintsDefault: boolean
   explanationDepth: 'short' | 'standard' | 'detailed'
+}
+
+export interface GameSettings {
+  difficulty: DifficultyLevel
+  instructionLanguage: InstructionLanguage
+  translationVisibility: TranslationVisibility
+  showRomanization: boolean
+  showVisualHints: boolean
+  scenarioFocus: ScenarioFocus
+  restaurantType: RestaurantType | 'all'
+  waiterProfileId: string
+  numberOfPeople: number
+  includeAlcohol: boolean
+  includeDietaryRestrictions: boolean
+  includeSpicyRestrictions: boolean
 }
 
 export interface ConstraintEvaluation {

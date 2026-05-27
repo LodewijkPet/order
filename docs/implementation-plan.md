@@ -246,3 +246,13 @@ Progress/results screen:
 ## First Milestone
 
 The first milestone is the MVP foundation: project scaffold, saved plan, structured learning data, menu selection evaluator, tests, and a minimal validation UI. Dialogue play, advanced settings behavior, and polished visuals come after this foundation is verified.
+
+## Added Follow-Up Steps
+
+After the first two milestones, continue with:
+
+1. Replace the quick toggle bar with a real settings panel that controls instruction language, translation timing, romanization, visual hints, difficulty, restaurant type, waiter profile, group size, alcohol, dietary restrictions, and spicy restrictions.
+2. Make the menu look more like a real Korean restaurant menu by grouping items under Korean section headings, aligning item names and prices, and keeping hints secondary.
+3. Add more answer-option variation in dialogue scenarios, including natural alternatives, overly textbook options, contextually awkward phrases, too-casual speech, and polite but socially imperfect choices.
+4. Use settings to change what information appears before and after the player answers, especially English translations and romanization.
+5. Keep menu data, dialogue data, and scoring logic separate from React UI so future restaurant types can reuse the same evaluators.
